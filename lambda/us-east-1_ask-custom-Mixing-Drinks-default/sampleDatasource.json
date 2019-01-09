@@ -1,0 +1,40 @@
+{
+	"mixedDrinkData": {
+		"properties": {
+			"backgroundImg": "https://s3.amazonaws.com/apl-community-code/drinks/barbackground.jpg",
+			"selectedDrink": {
+		      "name": "Gin and Tonic",
+		      "videoSrc": "https://s3.amazonaws.com/apl-community-code/drinks/ginandtonic.mp4",
+		      "imgSrc": "https://s3.amazonaws.com/apl-community-code/drinks/ginandtonic.jpeg",
+		      "ingredients": [
+		        {
+		          "name": "Gin",
+		          "amount": "1 part"
+		        },
+		        {
+		          "name": "Tonic",
+		          "amount": "3 parts"
+		        },
+		        {
+		          "name": "Lime",
+		          "amount": "Optional, one slice"
+		        }
+		      ],
+		      "recipe": "In a glass filled with ice cubes, add gin and tonic. Squeeze lime."
+		    },
+		    "recipeSsml": "<speak>In a glass filled with ice cubes, add gin and tonic. Squeeze lime.<speak>"
+		},
+		"transformers": [
+			{
+                "inputPath": "recipeSsml",
+                "outputName": "recipeSpeech",
+                "transformer": "ssmlToSpeech"
+            },
+            {
+            	"inputPath": "recipeSsml",
+            	"outputName": "recipeText",
+            	"transformer": "ssmlToText"
+            }
+		]
+	}
+}

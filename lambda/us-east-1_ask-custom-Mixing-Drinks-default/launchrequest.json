@@ -1,0 +1,82 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "items": [
+                    {
+                        "type": "Image",
+                        "source": "${payload.mixedDrinkData.properties.backgroundImg}",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "scale": "best-fill",
+                        "position": "absolute"
+                    },
+                    {
+                        "type": "Container",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "justifyContent": "center",
+                        "alignItems": "center",
+                        "items": [
+                            {
+                                "type": "Frame",
+                                "width": "50vw",
+                                "height": "20vh",
+                                "backgroundColor": "rgba(7, 48, 6, 0.75)",
+                                "item": {
+                                    "type": "Text",
+                                    "text": "Mixing Drinks",
+                                    "textAlign": "center",
+                                    "fontWeight": "100",
+                                    "fontSize": "7vw",
+                                    "width": "50vw",
+                                    "height": "20vh",
+                                    "textAlignVertical": "center"
+                                }
+                            },
+                            {
+                                "type": "Sequence",
+                                "height": "70vh",
+                                "width": "100vw",
+                                "paddingTop": "5vh",
+                                "data": "${payload.mixedDrinkData.properties.listOfDrinks}",
+                                "scrollDirection": "vertical",
+                                "items": {
+                                    "type": "TouchWrapper",
+                                    "height": "15vh",
+                                    "width": "100vw",
+                                    "item": {
+                                        "type": "Text",
+                                        "text": "${data.name}",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "center",
+                                        "fontWeight": "700"
+                                    },
+                                    "onPress": {
+                                        "type": "SendEvent",
+                                        "arguments": [
+                                            "${index}"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

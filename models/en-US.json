@@ -1,0 +1,143 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "mixing drinks",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "DrinkIntent",
+                    "slots": [
+                        {
+                            "name": "drink",
+                            "type": "drinkType"
+                        }
+                    ],
+                    "samples": [
+                        "teach me {drink}",
+                        "i want to learn {drink}",
+                        "i want to learn how to make {drink}",
+                        "select {drink}",
+                        "i pick {drink}",
+                        "{drink}",
+                        "i choose {drink}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "drinkType",
+                    "values": [
+                        {
+                            "id": "9",
+                            "name": {
+                                "value": "spiked egg nog",
+                                "synonyms": [
+                                    "spiked nog",
+                                    "nog",
+                                    "egg nog"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "7",
+                            "name": {
+                                "value": "negroni"
+                            }
+                        },
+                        {
+                            "id": "6",
+                            "name": {
+                                "value": "moscow mule",
+                                "synonyms": [
+                                    "mule"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "name": {
+                                "value": "martini",
+                                "synonyms": [
+                                    "dirty martini",
+                                    "dry martini"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "margarita"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "hot buttered rum",
+                                "synonyms": [
+                                    "rum"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "8",
+                            "name": {
+                                "value": "old fashioned",
+                                "synonyms": [
+                                    "old fashion"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "0",
+                            "name": {
+                                "value": "gin and tonic",
+                                "synonyms": [
+                                    "tonic and gin",
+                                    "gin tonic"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "gin punch",
+                                "synonyms": [
+                                    "punch"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "5",
+                            "name": {
+                                "value": "mojito"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
